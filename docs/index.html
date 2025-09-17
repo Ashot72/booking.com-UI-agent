@@ -1,0 +1,450 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+.MsoChpDefault
+	{font-size:12.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:115%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link="#0563C1" vlink="#954F72" style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:24.0pt;line-height:115%'>AI-powered Booking.com agent, built
+with LangGraph Studio — integrating APIs and featuring modern UI components.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'>&nbsp;</p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Video Link: </span><a
+href="https://youtu.be/reu5tQTq60A" target="_blank"><span style='font-size:
+14.0pt;line-height:115%'>https://youtu.be/reu5tQTq60A</span></a></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>GitHub
+Repository: <a href="https://github.com/Ashot72/booking.com-UI-agent"
+target="_blank">https://github.com/Ashot72/booking.com-UI-agent</a></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Before going
+through this documentation, you should visit the  </span><a
+href="https://github.com/Ashot72/React-Multi-Agent-Chat-with-LangGraph"
+target="_blank"><span style='font-size:14.0pt;line-height:115%'>repository</span></a><span
+style='font-size:14.0pt;line-height:115%'> and read the documentation about </span><a
+href="https://ashot72.github.io/React-Multi-Agent-Chat-with-LangGraph/doc.html"
+target="_blank"><span style='font-size:14.0pt;line-height:115%'>React-Multi-Agent-Chat-with-LangGraph</span></a></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>In my
+multi-agent chat application, I created a new agent, Booking.com agent.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1493 height=724 id="Picture 1"
+src="index_files/image001.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Figure 1</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>We use the </span><a
+href="https://rapidapi.com/DataCrawler/api/booking-com15/playground"
+target="_blank"><span style='font-size:14.0pt;line-height:115%'>Booking.com</span></a><span
+style='font-size:14.0pt;line-height:115%'> API from </span><a
+href="https://rapidapi.com/hub" target="_blank"><span style='font-size:14.0pt;
+line-height:115%'>RapidAPI</span></a><span style='font-size:14.0pt;line-height:
+115%'> to access hotel data and integrate it into our booking flow. As you can
+see, there are several Booking.com implementations.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>The
+Booking.com API on RapidAPI is made by third-party developers. They provide a
+way to access Booking.com's hotel data. Booking.com doesn't officially support
+these APIs, </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>but many
+people use them successfully in their apps.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>We run two
+projects. The first one is the front-end React app — the UI layer that users
+interact with. It handles the chat interface, hotel cards, booking forms, and
+more.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>The second
+project is the backend LangGraph agent app — the AI agent that processes
+booking logic. It handles trip classification, destination search, hotel
+search, payments, and more. This app contains the core</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>business
+logic and AI workflows. LangGraph now lets you deliver React components from
+the server to the client, connecting the UI directly with the AI workflows.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Generative
+user interfaces (Generative UI) allow agents to go beyond text and generate
+rich user interfaces. This enables creating more interactive and context-aware </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Applications
+where the UI adapts based on the conversation flow and AI responses. LangGraph
+Platform supports collocating your React components with your graph code.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1345 height=851 id="Picture 2"
+src="index_files/image002.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Figure 2</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>When we type
+a question such as <i>I want to travel to Egypt</i>, the carousel React
+components are pushed from the server to the client.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Agent-UIs&nbsp;are
+a powerful system&nbsp;that allows&nbsp;LangGraph agents to display rich,
+interactive&nbsp;user interfaces&nbsp;instead of just plain text responses.
+Think of them as custom&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>React
+components&nbsp;that can be dynamically rendered within chat conversations to
+provide&nbsp;users with&nbsp;interactive&nbsp;forms, data displays, and complex
+user interfaces.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>The system
+operates through a three-layer architecture:</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1023 height=665 id="Picture 3"
+src="index_files/image003.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Figure 3</span></p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt;line-height:115%'>Component
+Registry</span></b><span style='font-size:14.0pt;line-height:115%'>:&nbsp;All
+available UI components are registered in a central map
+(src/agent-uis/index.ts) that acts like&nbsp;a catalog of available interfaces.
+Currently, there are three main components: </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>trip&nbsp;destination&nbsp;selection,
+hotel listings, and payment processing.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1443 height=821 id="Picture 4"
+src="index_files/image004.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Figure 4</span></p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt;line-height:115%'>Agent
+Integration</span></b><span style='font-size:14.0pt;line-height:115%'>: When an
+agent needs to display an interactive interface, it uses special
+tools&nbsp;that push UI&nbsp;components to&nbsp;the chat interface. These tools
+use the&nbsp;<i>typedUi</i>&nbsp;function to render</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>React
+components with specific data and&nbsp;props.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1444 height=805 id="Picture 5"
+src="index_files/image005.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Figure 5</span></p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt;line-height:115%'>User
+Interaction:</span></b><span style='font-size:14.0pt;line-height:115%'> Users
+can interact with these components (click buttons, fill forms, select options),
+and their actions are automatically submitted back to the agent as tool calls,
+creating a </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>seamless
+conversation flow.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1151 height=770 id="Picture 6"
+src="index_files/image006.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Figure 6</span></p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt;line-height:115%'>The
+Three&nbsp;Main Components</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt;line-height:115%'>Trip
+Destination Component</span></b><span style='font-size:14.0pt;line-height:115%'>:
+This displays a carousel&nbsp;of travel destinations with&nbsp;images&nbsp;and
+information. Users can&nbsp;select a destination, choose travel dates, specify
+the number of guests&nbsp;and rooms,&nbsp;and&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>submit&nbsp;a
+hotel search request. It includes date validation&nbsp;to ensure
+users&nbsp;select future dates and that arrival is&nbsp;before departure.</span></p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt;line-height:115%'>Hotels by
+Destination Component</span></b><span style='font-size:14.0pt;line-height:115%'>:
+After searching for hotels, this component displays a list of
+available&nbsp;hotels&nbsp;with photos, ratings,&nbsp;prices, and&nbsp;detailed
+information. Users can click&nbsp;on&nbsp;any&nbsp;hotel to see </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>more details
+and&nbsp;select&nbsp;it&nbsp;for booking.</span></p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt;line-height:115%'>Stripe
+Processing Component</span></b><span style='font-size:14.0pt;line-height:115%'>:
+When a user is ready to pay, this component provides&nbsp;a
+secure&nbsp;payment&nbsp;interface using&nbsp;Stripe integration. It shows the
+total amount, payment summary, and handles the&nbsp;actual&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>payment
+processing&nbsp;with SSL&nbsp;encryption.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt;line-height:115%'>The Magic
+Behind the&nbsp;Scenes</span></b></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>When
+a&nbsp;user says something&nbsp;like &quot;I want to&nbsp;book&nbsp;a trip to
+Paris,&quot; the&nbsp;booking agent doesn't just respond with text. Instead:</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-size:14.0pt;line-height:115%'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;line-height:115%'>The agent
+processes the request and searches for Paris destinations</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-size:14.0pt;line-height:115%'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;line-height:115%'>It pushes the
+trip destination UI component with Paris data</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-size:14.0pt;line-height:115%'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;line-height:115%'>The
+user&nbsp;sees an interactive interface&nbsp;with Paris options, date pickers,
+and&nbsp;guest selectors</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-size:14.0pt;line-height:115%'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;line-height:115%'>When the user
+fills out the form and clicks &quot;Search&nbsp;Hotels,&quot; the
+component&nbsp;submits this data back to the agent</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-size:14.0pt;line-height:115%'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;line-height:115%'>The&nbsp;agent
+processes the hotel search and&nbsp;pushes the&nbsp;hotels listing component</span></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.25in'><span
+style='font-size:14.0pt;line-height:115%'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;line-height:115%'>This creates a
+smooth, interactive&nbsp;booking flow without the user&nbsp;having to type
+complex commands</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>This&nbsp;system
+transforms traditional&nbsp;chatbot interactions from&nbsp;simple text
+exchanges into rich, app-like experiences. Instead of&nbsp;users having
+to&nbsp;remember specific&nbsp;commands&nbsp;or navigate through multiple steps
+</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>of text,
+they get&nbsp;intuitive interfaces&nbsp;that guide them&nbsp;through complex
+processes like&nbsp;booking travel, making&nbsp;payments, or managing data. The
+agent-uis system essentially&nbsp;bridges the gap between&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>conversational
+AI and traditional web applications, providing the&nbsp;best of both worlds:
+the natural language understanding of AI agents with the user-friendly
+interfaces of modern web apps.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=949 height=854 id="Picture 8"
+src="index_files/image007.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Figure 7</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>The <i>useArtifact</i>
+hook is a custom React hook that manages panel state, integrates with
+LangGraph's thread system, and provides a clean API for creating interactive
+side panels that feel native to the chat interface. </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>It
+essentially a bridge between the client application's artifact system and the
+individual UI components that need to use it. The client app does the heavy
+lifting of setting up the artifact infrastructure, </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>and the hook
+provides a clean API for components to access it.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1362 height=849 id="Picture 9"
+src="index_files/image008.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Figure 8</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>We're using
+Bootstrap because it&nbsp;provides&nbsp;a&nbsp;comprehensive design
+system&nbsp;that's well-tested&nbsp;and familiar to developers. The&nbsp;<i>useStyles</i>&nbsp;hook
+is our way of making Bootstrap work in the </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>shadow DOM
+context that LangGraph's UI system creates. <b>The key point is&nbsp;that
+this&nbsp;is specifically for shadow DOM isolation</b>&nbsp;- in the main app,
+components can access global Bootstrap styles normally, </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>but when our
+agent-uis components get rendered through LangGraph's UI system, they end up in
+a shadow&nbsp;DOM context where they can't access those global styles. That's
+why we need&nbsp;to&nbsp;inject the </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Bootstrap
+CSS directly into&nbsp;each&nbsp;component. If we were starting fresh, we might
+consider Tailwind or class-names (CN), since they work out of the box, but for
+now,&nbsp;useStyles&nbsp;is our&nbsp;bridge&nbsp;between Bootstrap and the </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>shadow DOM
+isolation that our agent-uis system requires.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1391 height=753 id="Picture 10"
+src="index_files/image009.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Figure 9</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>This is the
+client app. The artifact system in artifact.tsx is a React portal-based UI
+system that allows components to render content in a dedicated right panel.
+It's essentially a teleportation system </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>for React
+components - you can create content anywhere in your app and have it appeared
+in a specific location (the right panel). The artifact system is essentially a
+smart wrapper around React portals </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>that adds
+state management, unique identification, and a clean API for creating side
+panels and modal-like experiences.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1405 height=842 id="Picture 11"
+src="index_files/image010.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Figure 10</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Our
+agent-ui&nbsp;components are loaded from the client side as shadow DOM.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1326 height=756 id="Picture 13"
+src="index_files/image011.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Figure 11</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>LangGraph
+Platform will automatically bundle your UI components code and styles and serve
+them as external assets that can be loaded by the&nbsp;<i>LoadExternalComponent</i>&nbsp;component.
+</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Some
+dependencies such as&nbsp;react&nbsp;and&nbsp;react-dom&nbsp;will be
+automatically excluded from the bundle. The&nbsp;ExternalComponent is
+essentially a&nbsp;<b>dynamic&nbsp;component loader</b>&nbsp;that enables the </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>LangGraph
+system&nbsp;to inject custom UI components into your application based on the
+conversation context and message metadata.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>The <i>artifact</i>
+in <i>meta</i> enables external components to create
+sophisticated,&nbsp;interactive UI experiences that integrate seamlessly with
+your application's portal system.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1388 height=666 id="Picture 14"
+src="index_files/image012.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Figure 12</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>The&nbsp;<i>entrypoint.js</i>&nbsp;is
+a&nbsp;<b>dynamically&nbsp;generated JavaScript file</b>&nbsp;that serves as
+the entry point for external UI components&nbsp;in the
+LangGraph&nbsp;system.&nbsp;It's created by the LangGraph&nbsp;SDK&nbsp;to load
+and </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>execute
+agent-UI&nbsp;components. The generated entrypoint.js is essentially the&nbsp;<b>bridge
+between&nbsp;your application and external&nbsp;agent-UI components</b>,
+handling all the complexity&nbsp;of dynamic loading, module </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>resolution,
+and&nbsp;component execution while providing a clean interface through the
+ExternalComponent.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

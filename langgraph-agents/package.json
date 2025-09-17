@@ -1,0 +1,42 @@
+{
+  "name": "langgraph-js",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "langgraphjs dev",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint . --ext .ts,.tsx",
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx}\""
+  },
+  "dependencies": {
+    "@langchain/community": "^0.3.41",
+    "@langchain/core": "^0.3.45",
+    "@langchain/langgraph": "^0.2.64",
+    "@langchain/langgraph-cli": "^0.0.30",
+    "@langchain/langgraph-sdk": "^0.0.73",
+    "@langchain/openai": "^0.5.4",
+    "@langchain/tavily": "^0.1.1",
+    "nodemailer": "^6.10.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-stripe-checkout": "^2.6.3",
+    "stripe": "^8.222.0"
+  },
+  "devDependencies": {
+    "@types/nodemailer": "^6.4.17",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^3.6.2",
+    "typescript": "^5.3.3"
+  },
+  "resolutions": {
+    "react": "19.0.0-rc-69d4b800-20241021",
+    "react-dom": "19.0.0-rc-69d4b800-20241021",
+    "react-is": "19.0.0-rc-69d4b800-20241021"
+  }
+}
