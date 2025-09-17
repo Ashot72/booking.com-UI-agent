@@ -52,4 +52,4 @@ npm run dev
 
 ```
 
-📹 [Booking.com Video](https://youtu.be/reu5tQTq60A) | 📝 [Booking.com Description](https://ashot72.github.io/booking.com-UI-agent/doc.html)
+📹 [Booking.com Video](https://youtu.be/reu5tQTq60A) | 📝 [Booking.com Description](https://ashot72.github.io/booking.com-UI-agent/index.html)
