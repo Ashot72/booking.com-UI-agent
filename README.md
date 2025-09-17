@@ -1,7 +1,7 @@
 ## AI-powered [Booking.com](https://rapidapi.com/DataCrawler/api/booking-com15/playground) agent, built with LangGraph Studio — integrating APIs and featuring modern UI components.
 
 I extended my React Multi-Agent Chat app (powered by LangGraph Server Agents) by adding a new [Booking.com](https://rapidapi.com/DataCrawler/api/booking-com15/playground) agent.
-We use the [Booking.com](https://rapidapi.com/DataCrawler/api/booking-com15/playground) API from [RapidAPI](https://rapidapi.com/hub) to access hotel data and integrate it into our booking flow. As you can see, there are several Booking.com implementations. The Booking.com API on RapidAPI is made by third-party developers. They provide a way to access [Booking.com's](https://rapidapi.com/DataCrawler/api/booking-com15/playground) hotel data. [Booking.com](https://rapidapi.com/DataCrawler/api/booking-com15/playground) doesn't officially support these APIs, but many people use them successfully in their apps.
+We use the [Booking.com](https://rapidapi.com/DataCrawler/api/booking-com15/playground) API from [RapidAPI](https://rapidapi.com/hub) to access hotel data and integrate it into our booking flow. As you can see, there are several Booking.com implementations. The Booking.com API on RapidAPI is made by third-party developers. They provide a way to access [Booking.com's](https://rapidapi.com/DataCrawler/api/booking-com15/playground) hotel data. Booking.com doesn't officially support these APIs, but many people use them successfully in their apps.
 
 You will see how the system transforms traditional chatbot interactions from simple text exchanges into rich, app-like experiences. Instead of users having to remember specific commands or navigate through multiple steps of text, they get intuitive interfaces that guide them through complex processes such as booking travel, making payments, or managing data. The agent-uis system essentially bridges the gap between conversational AI and traditional web applications, providing the best of both worlds: the natural language understanding of AI agents and the user-friendly interfaces of modern web apps.
 
@@ -25,11 +25,11 @@ This project consists of two parts:
 ```bash
 # Clone the repository
 
-git clone https://github.com/Ashot72/React-Multi-Agent-Chat-with-LangGraph
+git clone https://github.com/Ashot72/booking.com-UI-agent.git
 
 # LangGraph Studio
 
-cd React-Multi-Agent-Chat-with-LangGraph/langgraph-agents
+cd booking.com-UI-agent/langgraph-agents
 
 # Create the .env file based on env.example.txt and include the required keys
 # (OpenAI API key, Tavily Search key, RapidAPI, Booking.com, Stripe, and NodeMailer settings)
@@ -42,7 +42,7 @@ npm start
 
 # React App
 
-cd React-Multi-Agent-Chat-with-LangGraph/langgraph-multichat
+cd booking.com-UI-agent/langgraph-multichat
 
 # Install dependencies
 npm install
