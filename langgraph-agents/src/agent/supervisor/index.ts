@@ -10,6 +10,7 @@ export const ALL_TOOL_DESCRIPTIONS = `
  - jobNotification: - can select the best candidate for a position and send an email notification
  - search: - access to real-time and relevant web information,
  - booking: helps the user book a trip. It can suggest destinations, and hotels in any given location.
+ - chat: - provides general conversation and assistance for questions not related to specific tasks.
 `;
 
 function handleRoute(
